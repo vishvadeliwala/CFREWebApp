@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="../style/login.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<html>
+    <head>
+        <img src = "../resources/logo.png" alt = "logo">
+        <h1>Crop and Fertilizer Recommendation Engine</h1>
+    </head>
+    <body>
+        <div class="overlay">
+            <form>
+               <div class="con">
+               <header class="head-form">
+                  <h2>Log In</h2>
+               </header>
+               <br>
+               <div class="field-set">
+                     <span class="input-item">
+                       <i class="fa fa-user-circle"></i>
+                     </span>
+                     <input class="form-input" id="txt-input" type="text" placeholder="Username" required>
+                 
+                  <br>
+                                 
+                  <span class="input-item">
+                    <i class="fa fa-key"></i>
+                   </span>
+                  <input class="form-input" type="password" placeholder="Password" id="pwd"  name="password" required>
+                 
+                 <span>
+                    <i class="fa fa-eye" aria-hidden="true"  type="button" id="eye" onclick="showpass()"></i>
+                 </span>
+                 
+                 
+                  <br>
+                  <button class="log-in" onclick="login"> Log In </button>
+               </div>
+              
+               <div class="other">
+                  <button class="btn submits frgt-pass" id="forgotpass">Forgot Password</button>
+                  <button class="btn submits sign-up" id="signup" onclick="signup()" formnovalidate="formnovalidate">Sign Up 
+                  <i class="fa fa-user-plus" aria-hidden="true"></i>
+                  </button>
+               </div>
+                 
+              </div>
+              
+            </form>
+            </div> 
+    </body>
+</html>
