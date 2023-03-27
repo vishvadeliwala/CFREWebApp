@@ -7,6 +7,7 @@
     "style-loader": "^3.3.2",
     "webpack": "^5.76.3",
     "webpack-cli": "^5.0.1",
-    "bootstrap": "^5.2.3"
+    "bootstrap": "^5.2.3",
+    "mongodb": "^5.1.0"
   }
 }
