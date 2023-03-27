@@ -1,190 +1,247 @@
-/* Fonts Form Google Font ::- https://fonts.google.com/  -:: */
-@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
-/* End Fonts */
-/* Start Global rules */
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
 }
-/* End Global rules */
 
-h1 {
+.title h1 {
     color: green;
-    font-size: 50px;
+    font-size: 300%;  
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-align: left;
+    text-align: center;
     float: right;
-    padding-right: 11%;
-    padding-top: 5%;
-  }  
+    position:relative;
+    padding-right: 8%;
+    margin-top: 4%;
+    padding-bottom: 10%;
+  }
 
-img{
-    width: 14%;
+.title img{
+    position: relative;
+    max-width: 14%;
     height: 14%;
     border-radius: 80%;
+    align-items: top;
+    float:left;
     padding-left: 0.5%;
     padding-top: 0.5%;
 }
 
-body {
-	min-height: 100vh;
-	align-items: center;
-	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-image: url("../resources/background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #EBE9D6;
-    background-attachment: fixed;
-    font-family: 'Vibur', cursive;
-    font-family: 'Abel', sans-serif;
-    opacity: .95;
+body{
+  min-height: 100vh;
+  background-image: url("../resources/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 50%;
+  padding: 5%;
 }
 
-/* Start form  attributes */
-form {
-    width: 450px;
-    min-height: 500px;
-    height: auto;
-    border-radius: 5px;
-    margin: 2% auto;
-    box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
-    padding: 2%;
-    background-image: linear-gradient(-225deg, #8bcd6ae8 50%, #EBE9D6 50%);
-}
-/* form Container */
-form .con {
-    display: -webkit-flex;
-    display: flex;
-  
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
-  
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-  
-      margin: 0 auto;
-}
-
-/* the header form form */
-header {
-    margin: 2% auto 10% auto;
-    text-align: center;
-}
-/* Login title form form */
-header h2 {
-    font-size: 250%;
-    font-family: 'Playfair Display', serif;
-    color: #EBE9D6;
-}
-/*  A welcome message or an explanation of the login form */
-header p {letter-spacing: 0.05em;}
-
-
-
-
-.input-item {
-    background: #EBE9D6;
-    color: #333;
-    padding: 14.5px 0px 15px 9px;
-    border-radius: 5px 0px 0px 5px;
-}
-
-#eye {
-    background: #fff;
-    color: #333;
-  
-    margin: 5.9px 0 0 0;
-    margin-left: -20px;
-    padding: 15px 9px 19px 0px;
-    border-radius: 0px 5px 5px 0px;
-  
-    float: right;
+.container{
     position: relative;
-    right: 1%;
-    top: -.2%;
-    z-index: 5;
-    
-    cursor: pointer;
+    max-width: 850px;
+    width: 100%;
+    display: grid;
+    background: #EBE9D6;
+    padding: 40px 30px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    perspective: 2700px;
+    margin-bottom: 10%;
+    margin: auto;  
 }
-
-input[class="form-input"]{
-    width: 240px;
-    height: 50px;
   
-    margin-top: 2%;
-    padding: 15px;
-    
-    font-size: 16px;
-    font-family: 'Abel', sans-serif;
-    color: #5E6472;
-  
-    outline: none;
-    border: none;
-  
-    border-radius: 0px 5px 5px 0px;
-    transition: 0.2s linear;
-    
-}
-input[id="txt-input"] {width: 250px;}
-input:focus {
-    transform: translateX(-2px);
-    border-radius: 5px;
-}
-
-button {
-    display: inline-block;
-    color: #252537;
-
-    width: 150px;
-    height: 50px;
-  
-    padding: 0 20px;
-    background: #fff;
-    border-radius: 2px;
-    
-    outline: none;
-    border: none;
-  
-    cursor: pointer;
+  .container .cover{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    z-index: 98;
+    transition: all 1s ease;
+    transform-origin: left;
+    transform-style: preserve-3d;
+  }
+  .container #flip:checked ~ .cover{
+    transform: rotateY(-180deg);
+  }
+   .container .cover .front,
+   .container .cover .back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .cover .back{
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+  }
+  .container .cover::before,
+  .container .cover::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #8bcd6ae8;
+    opacity: 1;
+    z-index: 12;
+  }
+  .container .cover::after{
+    opacity: 0.3;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+  }
+  .container .cover img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 10;
+  }
+  .container .cover .text{
+    position: absolute;
+    z-index: 130;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .cover .text .text-1,
+  .cover .text .text-2{
+    font-size: 26px;
+    font-weight: 600;
+    color: #EBE9D6;
     text-align: center;
-    transition: all 0.2s linear;
-    
-    margin: 7% auto;
-    letter-spacing: 0.05em;
-}
-/* Submits */
-.submits {
-    width: 48%;
-    display: inline-block;
-    margin-left: 2%;
-}
+  }
+  .cover .text .text-2{
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .container .forms{
+    height: 100%;
+    width: 100%;
+    background: #EBE9D6;
+  }
+  .container .form-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .form-content .login-form,
+  .form-content .signup-form{
+    width: calc(100% / 2 - 25px);
+  }
+  .forms .form-content .title{
+    position: relative;
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+  }
+  .forms .form-content .title:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 25px;
+    background: #8bcd6ae8;
+  }
+  .forms .signup-form  .title:before{
+    width: 20px;
+  }
+  .forms .form-content .input-boxes{
+    margin-top: 30px;
+  }
+  .forms .form-content .input-box{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+  }
+  .form-content .input-box input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+  .form-content .input-box input:focus,
+  .form-content .input-box input:valid{
+    border-color: #8bcd6ae8;
+  }
+  .form-content .input-box i{
+    position: absolute;
+    color: #8bcd6ae8;
+    font-size: 17px;
+  }
+  .forms .form-content .text{
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+  }
+  .forms .form-content .text a{
+    text-decoration: none;
+  }
+  .forms .form-content .text a:hover{
+    text-decoration: underline;
+  }
+  .forms .form-content .button{
+    color: #EBE9D6;
+    margin-top: 40px;
+  }
+  .forms .form-content .button input{
+    color: #EBE9D6;
+    background: #8bcd6ae8;
+    border-radius: 6px;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  .forms .form-content .button input:hover{
+    background: #8bcd6ae8;
+  }
+  .forms .form-content label{
+    color: #5b13b9;
+    cursor: pointer;
+  }
+  .forms .form-content label:hover{
+    text-decoration: underline;
+  }
+  .forms .form-content .login-text,
+  .forms .form-content .sign-up-text{
+    text-align: center;
+    margin-top: 25px;
+  }
+  .container #flip{
+    display: none;
+  }
 
-/*       Forgot Password button FAF3DD  */
-.frgt-pass {background: transparent;}
-
-/*     Sign Up button  */
-.sign-up {background: #8bcd6ae8;
-}
-
-
-/* buttons hover */
-button:hover {
-    transform: translatey(3px);
-    box-shadow: none;
-}
-
-/* buttons hover Animation */
-button:hover {
-    animation: ani9 0.4s ease-in-out infinite alternate;
-}
-@keyframes ani9 {
-    0% {
-        transform: translateY(3px);
+  @media (max-width: 730px) {
+    .container .cover{
+      display: none;
     }
-    100% {
-        transform: translateY(5px);
+    .form-content .login-form,
+    .form-content .signup-form{
+      width: 100%;
     }
-}
+    .form-content .signup-form{
+      display: none;
+    }
+    .container #flip:checked ~ .forms .signup-form{
+      display: block;
+    }
+    .container #flip:checked ~ .forms .login-form{
+      display: none;
+    }
+  }

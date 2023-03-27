@@ -1,0 +1,118 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+
+.title h1 {
+    color: green;
+    font-size: 300%;  
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    float: right;
+    position:relative;
+    padding-right: 8%;
+    margin-top: 4%;
+    padding-bottom: 10%;
+  }
+
+.title img{
+    position: relative;
+    max-width: 14%;
+    height: 14%;
+    border-radius: 80%;
+    align-items: top;
+    float:left;
+    padding-left: 0.5%;
+    padding-top: 0.5%;
+}
+
+body{
+    min-height: 100vh;
+    background-image: url("../resources/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 50%;
+    padding: 5%;
+  }
+
+ul {
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;}
+
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: #EBE9D6;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+  .active {
+    background-color: green;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 10% auto 0;
+    width: auto;
+    background-color: #EBE9D6;
+  }
+  
+  .card {
+    box-shadow: 0 3px 10px 0 #aaa;
+    cursor: pointer;
+    height: 10%;
+    position: relative;
+    width: 20%;
+  }
+  
+  .card h2 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .card.visited {
+    box-shadow: 0 3px 10px 2px #444;
+  }
+  
+  .card image{
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+  @media (max-width: 1100px) {
+    .cards {
+      grid-template-columns: 1fr 1fr;
+      width: calc(280px * 2);
+    }
+    .card {
+      margin: 0 auto 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cards {
+      display: block;
+      width: 100vw;
+    }
+    .card {
+      margin: 0 auto 2rem;
+    }
+  }
