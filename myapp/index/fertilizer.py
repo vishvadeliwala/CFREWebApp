@@ -35,7 +35,7 @@ def show():
         Recommended_crop = prediction.get("Fertilizer")
         if Recommended_crop:
             data["email"] = email
-            data["RecommendedCrop"] = Recommended_crop
+            data["RecommendedFertilizer"] = Recommended_crop
             History.insert_one(data).inserted_id
             return render_template("fertilizer.html", prediction=Recommended_crop,
             N=N,P=P,K=K,temp=temp,humidity=humidity,moisture=moisture,soil=int(soil),crop=int(crop))
