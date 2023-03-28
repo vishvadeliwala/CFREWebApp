@@ -77,7 +77,6 @@ ul {
   background-color: green;
 }
 
-.form-input
 @media(min-width: 50%){
   .form-input{
     max-width: 50%;
