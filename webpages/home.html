@@ -7,37 +7,43 @@
 
 <html>
     <body>
-      <div class="title">
-         <img src = "../resources/logo.png" alt = "logo">
-         <h1>Crop and Fertilizer Recommendation Engine</h1>
-      </div>
-      <ul>
-        <li><a class="active" href="home.html">Home</a></li>
-        <li><a href="contact.html">Crop Recommender</a></li>
-        <li><a href="crop.html">Fertilizer Recommender</a></li>
-        <li><a href="fertilizer.html">Contact Us</a></li>
-        <li><a href="about.html">About</a></li>
-        <li style="float: right"><a href="index.html">Sign Out</a></li>
-      </ul>
+        <header>
+          <div class="title">
+              <img src = "../resources/logo.png" alt = "logo">
+              <h1>Crop and Fertilizer Recommendation Engine</h1>
+           </div>
+           <ul class="navbar">
+             <li><a class="active" href="home.html">Home</a></li>
+             <li><a href="crop.html">Crop Recommender</a></li>
+             <li><a href="fertilizer.html">Fertilizer Recommender</a></li>
+             <li><a href="contact.html">Contact Us</a></li>
+             <li style="float: right"><a href="index.html">Sign Out</a></li>
+           </ul>
+         </header>
+      
+      <div class="container">
+        <h2> Choose any one card:</h2>
+
       <div class="cards">
         <div class="card">
-          <img src="../resources/crop_image.webp" alt="crop recommender" class="card-img-top">
-          <div class="card-body">
-            <h2 class="card-title">Crop Recommender</h2>
+        <a href="crop.html">
+          <img src="../resources/crop_image [photoutils.com].webp" alt="crop recommender" class="card-img-top">
+            <h1 class="card-title">Crop Recommender</h1>
             <p>
               Click this card to get recommendation on which crop to sow based on the weather and soil <a href="crop.html"></a>
             </p>
-          </div>
+        </a>
         </div>
-    
+
         <div class="card">
-          <img src="../resources/fertilizer_img.jpeg" alt="fertilizer recommender" class="card-img-top">
-          <div class="card-body">
-            <h2 class="card-title">Fertilizer Recommender</h2>
-            <p>
-                Click this card to get recommendation on which fertilizer to use based on the crop, weather and soil <a href="fertilizer"></a>
-            </p>
-          </div>
+            <a href="fertilizer.html">
+            <img src="../resources/fertilizer_img [photoutils.com].jpeg" alt="fertilizer recommender" class="card-img-top">
+                <h1 class="card-title">Fertilizer Recommender</h1>
+                <p>
+                    Click this card to get recommendation on which fertilizer to use based on the crop, weather and soil <a href="fertilizer"></a>
+                </p>
+            </a>
         </div>
+     </div>
     </body>
 </html>

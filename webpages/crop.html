@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../style/crop.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="icon" href="../resources/logo.png" type="image/icon type">
+
+<html>
+    <body>
+        <header>
+          <div class="title">
+              <img src = "../resources/logo.png" alt = "logo">
+              <h1>Crop and Fertilizer Recommendation Engine</h1>
+           </div>
+           <ul class="navbar">
+             <li><a href="home.html">Home</a></li>
+             <li><a class="active" href="crop.html">Crop Recommender</a></li>
+             <li><a href="fertilizer.html">Fertilizer Recommender</a></li>
+             <li><a href="contact.html">Contact Us</a></li>
+             <li style="float:right"><a href="index.html">Sign Out</a></li>
+           </ul>
+         </header>
+    <div class="container">
+       <h1 id='title'>Crop Recommendation Engine</h1>
+           <p id='description'>
+               Let AI help you in finding suitable crop for you
+           </p>
+           <p> Please provide the following values and click submit to get crop recommendation:</p>
+       <form id='crop-form' action="http://localhost:5001/crop_recommend" name="crop-form" method="POST">
+           <div class='form-input'>
+               <label id='crop_nitrogen'>Nitrogen</label>
+               <input type="number" id="crop_nitrogen" name="N" step="any" min="1" required>
+           </div>
+           <div class='form-input'>
+            <label id='crop_phosphorus'>Phosphorus</label>
+            <input type="number" id="crop_phosphorus" name="P" step="any" min="1" required>
+        </div>
+        <div class='form-input'>
+            <label id='crop_potassium'>Potassium</label>
+            <input type="number" id="crop_potassium" name="K" step="any" min="1" required>
+        </div>
+        <div class='form-input'>
+            <label id='crop_temperature'>Temperature (in Celcius)</label>
+            <input type="number" id="crop_temperature" name="temp" step="any" min="1" required>
+        </div>
+        <div class='form-input'>
+            <label id='crop_humidity'>Humidity (in %)</label>
+            <input type="number" id="crop_humidity" name="humidity" step="any" min="1" required>
+        </div>
+        <div class='form-input'>
+            <label id='crop_ph'>Ph</label>
+            <input type="number" id="crop_ph" name="ph" step="any" min="1">
+        </div>
+        <div class='form-input'>
+            <label id='crop_rainfall'>Rainfall (in mm)</label>
+            <input type="number" id="crop_rainfall" name="rainfall" step="any" min="1">
+        </div>
+           <div class='form-input'>
+               <button type='submit' id='submit' style="background-color: green;" >Submit</button>
+           </div>
+       </form>
+   </div>
+
+</body>
+</html>
