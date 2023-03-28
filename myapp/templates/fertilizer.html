@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../static/css/fertilizer.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="icon" href="../static/resources/logo.png" type="image/icon type">
+
+<html>
+    <body>
+        <header>
+          <div class="title">
+              <img src = "../static/resources/logo.png" alt = "logo">
+              <h1>Crop and Fertilizer Recommendation Engine</h1>
+           </div>
+           <ul class="navbar">
+             <li><a href="/home">Home</a></li>
+             <li><a href="/crop">Crop Recommender</a></li>
+             <li><a class="active" href="/fertilizer">Fertilizer Recommender</a></li>
+             <li><a href="/contact">Contact Us</a></li>
+             <li style="float:right"><a href="/signout">Sign Out</a></li>
+           </ul>
+         </header>
+    <div class="container">
+       <h1 id='title'>Fertilizer Recommendation Engine</h1>
+           <p id='description'>
+               Get suitable fertilizer for your crop
+           </p>
+           <p> Please provide the following values and click submit to get fertilizer recommendation:</p>
+       <form id='fertilizer-form' action="/fertilizer" name="fertilizer-form" method="POST">
+        <div class='form-input'>
+               <label id='fert_temp'>Temperature</label>
+               <input type="number" id="fert_temp" name="temp" value={{temp}} step="any" min="1" required>
+           </div>
+           <div class='form-input'>
+            <label id='fert_humidity'>Humidity in %</label>
+            <input type="number" id="fert_humidity" name="humidity" value={{humidity}} step="any" min="1" required>
+        </div>
+        <div class='form-input'>
+            <label id='fert_moisture'>Moisture</label>
+            <input type="number" id="fert_moisture" name="moisture" value={{moisture}} step="any" min="1" required>
+        </div>
+        <div class='form-input'>
+            <label id='fert_soil'>Soil</label>
+            <select id="fert_soil"  name="soil" value={{soil}} required>
+                <option selected hidden>Select soil type</option>
+                <option value="0">Black</option>
+                <option value="1">Clayey</option>
+                <option value="2">Leamy</option>
+                <option value="3">Red</option>
+                <option value="4">Sandy</option>
+            </select>
+        </div>
+        <div class='form-input'>
+            <label id='fert_crop'>Crop</label>
+            <select id="fert_crop"  name="crop" value={{crop}} required>
+                <option selected hidden>Select crop</option>
+                <option value="0">Barley</option>
+                <option value="1">Cotton</option>
+                <option value="2">Ground Nuts</option>
+                <option value="3">Maize</option>
+                <option value="4">Millets</option>
+                <option value="5">Oil seeds</option>
+                <option value="6">Paddy</option>
+                <option value="7">Pulses</option>
+                <option value="8">Sugarcane</option>
+                <option value="9">Tobacco</option>
+                <option value="10">Wheat</option>
+            </select>
+        </div>
+        <div class='form-input'>
+            <label id='fert_nitrogen'>Nitrogen</label>
+            <input type="number" id="fert_nitrogen" name="N" value={{N}} step="any" min="1" required>
+        </div>
+        <div class='form-input'>
+            <label id='fert_phosphorus'>Phosphorus</label>
+            <input type="number" id="fert_phosphorus" name="P" value={{P}} step="any" min="1" required>
+        </div>
+        <div class='form-input'>
+            <label id='fert_potassium'>Potassium</label>
+            <input type="number" id="fert_potassium" name="K" value={{K}} step="any" min="1" required>
+        </div>
+           <div class='form-input'>
+               <button type='submit' id='submit' style="background-color: green;">Submit</button>
+           </div>
+       </form>
+   </div>
+
+</body>
+</html>

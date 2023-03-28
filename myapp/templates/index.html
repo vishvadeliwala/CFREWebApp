@@ -1,71 +1,78 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
-<link rel="stylesheet" href="../style/index.css">
+<link rel="stylesheet" href="../static/css/index.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<link rel="icon" href="../resources/logo.png" type="image/icon type">
+<link rel="icon" href="../static/resources/logo.png" type="image/icon type">
 
 <html>
     <body>
       <div class="title">
-         <img src = "../resources/logo.png" alt = "logo">
+         <img src = "../static/resources/logo.png" alt = "logo">
          <h1>Crop and Fertilizer Recommendation Engine</h1>
       </div>
       <div class="container">
           <input type="checkbox" id="flip">
           <div class="cover">
             <div class="front">
-               <img src="../resources/login_background.jpeg" alt="background">
+               <img src="../static/resources/login_background.jpeg" alt="background">
             </div>
           </div>
           <div class="forms">
               <div class="form-content">
                 <div class="login-form">
                   <div class="title">Login</div>
-                <form action="../webpages/home.html">
+                <form method="POST" action="/login">
                   <div class="input-boxes">
                     <div class="input-box">
                       <i class="fas fa-envelope"></i>
-                      <input type="text" placeholder="Enter your email" required>
+                      <input name="email" type="text" placeholder="Enter your email" required>
                     </div>
                     <div class="input-box">
                       <i class="fas fa-lock"></i>
-                      <input type="password" placeholder="Enter your password" required>
+                      <input name="pwd" type="password" placeholder="Enter your password" required>
                     </div>
-                    <div class="text"><a href="#">Forgot password?</a></div>
+                    <!-- <div class="text"><a href="#">Forgot password?</a></div> -->
                     <div class="button input-box">
                       <input type="submit" value="Sumbit">
                     </div>
                     <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
+                    <div class="text error-msg">{{login_error}}</div>
                   </div>
               </form>
             </div>
               <div class="signup-form">
                 <div class="title">Signup</div>
-              <form action="signup.html">
+              <form method="POST" action="/signup" class="signup">
                   <div class="input-boxes">
                     <div class="input-box">
                       <i class="fas fa-user"></i>
-                      <input type="text" placeholder="Enter your name" required>
+                      <input name="name" type="text" placeholder="Enter your full name" required>
                     </div>
                     <div class="input-box">
                       <i class="fas fa-envelope"></i>
-                      <input type="text" placeholder="Enter your email" required>
+                      <input name="email" type="text" placeholder="Enter your email" required>
                     </div>
                     <div class="input-box">
                       <i class="fas fa-lock"></i>
-                      <input type="password" placeholder="Enter your password" required>
+                      <input name="pwd" type="password" placeholder="Enter your password" required>
                     </div>
                     <div class="button input-box">
-                      <input type="submit" value="Sumbit">
+                      <input id="signup_submit" type="submit" value="Sumbit">
                     </div>
-                    <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+                    <div id="signup_text" class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+                    <div id="error_msg" class="text error-msg">{{signup_error}}</div>
                   </div>
+                  <script> 
+                  if(document.getElementById("error_msg").innerText != ""){
+                    console.log(document.getElementById("error_msg"))
+                    document.querySelector('[id="flip"]').click();
+                  } 
+                  </script>
             </form>
           </div>
           </div>
           </div>
         </div>
-      <script src="../src/index.js"></script>
    </body>
 </html>
