@@ -162,3 +162,8 @@ h1#title{
 p{
     padding-left: 2%;
 }
+
+#result{
+  padding-left: 2%;
+  font-weight: bold;
+}
