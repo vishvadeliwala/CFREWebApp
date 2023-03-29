@@ -1,6 +1,6 @@
 
 function myfunc(){
-if(document.getElementById("prediction_history").innerHTML != undefined){
+if(document.getElementById("prediction_history").innerHTML != ""){
     var inner = String(document.getElementById("prediction_history").innerHTML)
     inner = inner.split("\'").join("\"");
     var data = JSON.parse(inner);
@@ -62,4 +62,5 @@ if(document.getElementById("prediction_history").innerHTML != undefined){
         document.getElementById("prediction_history").innerHTML = html;
     }
 }
+document.getElementById("prediction_history").innerHTML = "No Prediction History";
 }
