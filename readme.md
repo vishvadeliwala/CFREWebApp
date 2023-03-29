@@ -1,4 +1,4 @@
-To install the  dependencies for CFRE recommendation app please follow the steps below:
+To install the  dependencies for CFRE app please follow the steps below:
 
 1. python3 -m venv venv
 2. pip install -r requirements.txt
