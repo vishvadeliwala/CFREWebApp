@@ -10,6 +10,7 @@ from index.home import homepage
 from index.contact import contact
 from index.crop import crop
 from index.fertilizer import fertilizer
+from index.history import history
 
 app = Flask(__name__)
 app.secret_key = secrets.token_bytes(32)
@@ -24,3 +25,4 @@ app.register_blueprint(signout, url_prefix='')
 app.register_blueprint(contact, url_prefix='')
 app.register_blueprint(crop, url_prefix='')
 app.register_blueprint(fertilizer, url_prefix='')
+app.register_blueprint(history, url_prefix='')
