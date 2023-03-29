@@ -9,13 +9,14 @@
     <body>
         <header>
           <div class="title">
-              <img src = "../static/resources/logo.png" alt = "logo">
+            <a href="/home"><img src = "../static/resources/logo.png" alt = "logo"></a>
               <h1>Crop and Fertilizer Recommendation Engine</h1>
            </div>
            <ul class="navbar">
              <li><a href="/home">Home</a></li>
              <li><a class="active" href="/crop">Crop Recommender</a></li>
              <li><a href="/fertilizer">Fertilizer Recommender</a></li>
+             <li><a href="/history">History</a></li>
              <li><a href="/contact">Contact Us</a></li>
              <li style="float:right"><a href="/signout">Sign Out</a></li>
            </ul>
@@ -23,43 +24,46 @@
     <div class="container">
        <h1 id='title'>Crop Recommendation Engine</h1>
            <p id='description'>
-               Let AI help you in finding suitable crop for you
+               Let AI help you in finding suitable crop for you!
            </p>
            <p> Please provide the following values and click submit to get crop recommendation:</p>
        <form id='crop-form' action="/crop" name="crop-form" method="POST">
            <div class='form-input'>
                <label id='crop_nitrogen'>Nitrogen</label>
-               <input type="number" id="crop_nitrogen" name="N" step="any" value={{N}} min="1" required>
+               <input type="number" id="crop_nitrogen"  min="1" name="N" step="any" required value={{N}}>
            </div>
            <div class='form-input'>
-            <label id='crop_phosphorus'>Phosphorus</label>
-            <input type="number" id="crop_phosphorus" name="P" step="any" value={{P}} min="1" required>
-        </div>
-        <div class='form-input'>
-            <label id='crop_potassium'>Potassium</label>
-            <input type="number" id="crop_potassium" name="K" step="any" value={{K}} min="1" required>
-        </div>
-        <div class='form-input'>
-            <label id='crop_temperature'>Temperature (in Celcius)</label>
-            <input type="number" id="crop_temperature" name="temp" step="any" value={{temp}} min="1" required>
-        </div>
-        <div class='form-input'>
-            <label id='crop_humidity'>Humidity (in %)</label>
-            <input type="number" id="crop_humidity" name="humidity" step="any" value={{humidity}} min="1" required>
-        </div>
-        <div class='form-input'>
-            <label id='crop_ph'>Ph</label>
-            <input type="number" id="crop_ph" name="ph" step="any" value={{ph}} min="1">
-        </div>
-        <div class='form-input'>
-            <label id='crop_rainfall'>Rainfall (in mm)</label>
-            <input type="number" id="crop_rainfall" name="rainfall" value={{rainfall}} step="any" min="1">
-        </div>
-           <div class='form-input'>
-               <button type='submit' id='submit' style="background-color: green;" >Submit</button>
-           </div>
-        </form>
-       <div id="result" name="result" class="result-content">{{prediction}}</div>
+                <label id='crop_phosphorus'>Phosphorus</label>
+                <input type="number" id="crop_phosphorus" min="1" name="P" step="any" required value={{P}}>
+            </div>
+            <div class='form-input'>
+                <label id='crop_potassium'>Potassium</label>
+                <input type="number" id="crop_potassium"  min="1" name="K" step="any" required value={{K}}>
+             </div>
+            <div class='form-input'>
+                <label id='crop_temperature'>Temperature (in Celcius)</label>
+                <input type="number" id="crop_temperature" min="1" name="temp" step="any" required value={{temp}}>
+            </div>
+            <div class='form-input'>
+                <label id='crop_humidity'>Humidity (in %)</label>
+                <input type="number" id="crop_humidity" min="1" name="humidity" step="any"  required value={{humidity}} >
+            </div>
+            <div class='form-input'>
+                <label id='crop_ph'>Ph</label>
+                <input type="number" id="crop_ph" min="1" step="any" name="ph" required value={{ph}}>
+            </div>
+            <div class='form-input'>
+                <label id='crop_rainfall'>Rainfall (in mm)</label>
+                <input type="number" id="crop_rainfall" min="1" step="any" name="rainfall" required value={{rainfall}}>
+            </div>
+            <div class='button-form-input'>
+                <button type='submit' id='submit' >Submit</button>
+            </div>
+            </form>
+            <br>
+            <br>
+            <p> The recommended crop is: </p>>
+        <div id="result" name="result" class="result-content">{{prediction}}</div>
    </div>
 
 </body>

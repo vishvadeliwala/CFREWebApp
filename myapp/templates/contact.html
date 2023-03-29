@@ -9,20 +9,21 @@
     <body>
         <header>
           <div class="title">
-              <img src = "../static/resources/logo.png" alt = "logo">
+            <a href="/home"><img src = "../static/resources/logo.png" alt = "logo"></a>
               <h1>Crop and Fertilizer Recommendation Engine</h1>
            </div>
            <ul class="navbar">
              <li><a href="/home">Home</a></li>
              <li><a href="/crop">Crop Recommender</a></li>
              <li><a href="/fertilizer">Fertilizer Recommender</a></li>
+             <li><a href="/history">History</a></li>
              <li><a class="active" href="/contact">Contact Us</a></li>
              <li style="float: right"><a href="/signout">Sign Out</a></li>
            </ul>
          </header>
 
          <div class="container">
-            <h2>Please fill out this form if you have any questions/message for us</h2>
+            <h2 id="title">Please fill out this form if you have any questions/message for us</h2>
 
           <section class="contact-wrap">
             <form action="" class="contact-form">
@@ -57,7 +58,7 @@
                 </div>
               </div>
               <div class="col-sm-12">
-                <button class="square-button" style="background-color: green;">Send</button>
+                <button class="submit">Send</button>
               </div>
             </div>
             </form>
