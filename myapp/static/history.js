@@ -62,5 +62,7 @@ if(document.getElementById("prediction_history").innerHTML != ""){
         document.getElementById("prediction_history").innerHTML = html;
     }
 }
-document.getElementById("prediction_history").innerHTML = "No Prediction History";
+else{
+    document.getElementById("prediction_history").innerHTML = "No Prediction History";
+}
 }
