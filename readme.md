@@ -9,4 +9,6 @@ TO run the CFRE web app follow the steps below:
 3. Open a new terminal at CFREWebapp
 4. python run.py
 
-Open the local host link displayed in the python terminal.
+Click the local host link displayed in the python terminal to access the web application.
+
+
